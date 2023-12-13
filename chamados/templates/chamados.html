@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Denúncias de Infraestrutura Urbana</title>
+</head>
+<body>
+
+    <h1>Denúncias de Infraestrutura Urbana</h1>
+
+    <ul>
+        {% for denuncia in denuncias %}
+            <li>{{ denuncia.local }} - {{ denuncia.descricao }}</li>
+        {% endfor %}
+    </ul>
+
+    <a href="{% url 'receber_denuncia' %}">Fazer Denúncia</a>
+
+</body>
+</html>
