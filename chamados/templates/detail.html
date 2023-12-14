@@ -3,14 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="/static/chamados/css/detail.css">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'chamados/css/detail.css' %}">
+    <title>Chamado | Detalhes</title>
+    
 </head>
 <body>
-    <div class="user-details">
-        <h2 id="nome">Nome: {{denunciante.nome}}</h2>
-        <p id="email">Email: {{denunciante.email}}</p>
-        <p id="cpf">CPF: {{denunciante.cpf}}</p>
+    <div class="user-details"> 
+        <h2 id="problema">Problema: {{ chamado.problema }}</h2>
+        <p id="data_abertura">Data abertura: {{ chamado.data_abertura|date:'d/m/Y' }}</p>
+        <p id="situacao">Situação: {{ chamado.situacao }}</p>
     </div>
+    <a href="{% url 'lista' %}"><button type="button" class="btn btn-success">Voltar</button></a>
 </body>
 </html>

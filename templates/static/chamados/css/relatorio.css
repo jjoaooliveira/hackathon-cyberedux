@@ -1,0 +1,45 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 10px;
+    padding: 0;
+    background-color: #f0f0f5;
+}
+.container {
+    width: 500px;
+    margin: auto;
+    padding: 20px;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+h1 {
+    margin-left: 80px;
+    text-align: center;
+    color: #333;
+}
+
+#plotly_chart {
+    width: 500px;
+}
+
+.div-buttons {
+    height: 100px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+}
+
+button {
+    margin-left: 50px;
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 75px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+

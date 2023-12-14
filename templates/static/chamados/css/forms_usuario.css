@@ -1,0 +1,82 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #ffffff; /* Fundo branco */
+    color: #333333; /* Texto preto */
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #4CAF50; /* Verde */
+    color: #ffffff; /* Texto branco */
+    text-align: center;
+    padding: 1em 0;
+}
+
+section {
+    margin: 20px;
+}
+
+h2 {
+    color: #4CAF50; /* Verde para títulos */
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+input[type="text"],
+textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+    font-size: 1em;
+}
+
+#descricao {
+    font-size: 1em;
+}
+
+select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+    font-size: 1em;
+}
+
+select option {
+    font-size: 1em;
+}
+
+input[type="submit"] {
+    background-color: #4CAF50; /* Verde para botão */
+    color: #ffffff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049; /* Verde mais escuro ao passar o mouse */
+    font-size: 1em;
+}
+
+footer {
+    background-color: #4CAF50;
+    color: #ffffff;
+    text-align: center;
+    padding: 1em 0;
+    /*position: fixed;*/
+    bottom: 0;
+    width: 100%;
+}

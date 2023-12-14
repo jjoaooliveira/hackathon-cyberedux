@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/chamados/css/relatorio.css">
+    <title>Relatório | Chamados</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Relatório</h1>
+        <div id="plotly_chart">
+            {% if grafico %}  
+                {{ grafico|safe }}
+            {% else %}
+                <p>Gráfico indisponível</p>
+            {% endif %}
+        </div>
+    </div>
+    <dir class="div-buttons">
+        <a href="{% url 'lista' %}"><button>Voltar</button></a>
+    </dir>    
+</body>
+</html>

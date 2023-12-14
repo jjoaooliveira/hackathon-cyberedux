@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/chamados/css/forms_usuario.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1>Denúncias de Infraestrutura Urbana</h1>
+    </header>
+    <section>
+        <h2>Faça Sua Denúncia</h2>
+        <form action="{% url 'forms_post_usuario' %}" method="post">
+            <h3>Usuario</h3>
+            {% csrf_token %}
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email" required>
+
+            <label for="cpf">CPF:</label>
+            <input type="text" id="cpf" name="cpf" required>
+
+            <h3>Denuncia</h3>
+            <label for="dropdown">Cidade:</label>
+            <select id="dropdown" name="dropdown" style="width: 100%;">
+                {% for cidade in cidades %}
+                    <option value={{cidade.id}}>{{ cidade.nome }}</option>
+                {% endfor %}
+            </select>
+
+            <label for="endereco">Endereço:</label>
+            <input type="text" id="cpf" name="endereco" required>
+
+            <label for="cep">CEP:</label>
+            <input type="text" id="cpf" name="endereco" required>
+
+            <label for="problema">Problema:</label>
+            <input type="text" id="cpf" name="endereco" required>
+
+            <label for="dropdown">Categoria:</label>
+            <select id="dropdown" name="dropdown" style="width: 100%;">
+                {% for categoria in categorias %}
+                    <option value={{categoria.id}}>{{ categoria.nome }}</option>
+                {% endfor %}
+            </select>
+
+            <label for="descricao">Descrição:</label>
+            <textarea id="descricao" name="descricao" rows="4" required></textarea>
+
+            <input type="submit" value="Enviar Denúncia">
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Denúncias de Infraestrutura Urbana</p>
+    </footer>
+</body>
+</html>

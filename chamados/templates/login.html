@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/chamados/css/login.css">
+    <title>Login | Colaborador</title>
+</head>
+<body>
+    <div id="header">
+        <div>
+            <h1>SI-e</h1>
+        </div>
+    </div>
+
+    <div id="login-container">
+        <h2>Login de Funcionário</h2>
+        <form action="{% url 'lista' %}" method="post">
+            {% csrf_token %}
+            <label for="username">E-mail:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">Senha:</label>
+            <input type="password" id="password" name="password" required>
+
+           <button type="submit">Login</button>
+
+        </form>
+        <p><a href="#">Esqueceu a senha?</a></p>
+    </div>
+    <div id="voltar">
+        <a href="{% url 'index' %}"><button>Voltar</button></a>
+        <a href="{% url 'lista' %}"><button>Entrar</button></a>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 Denúncias de Infraestrutura Urbana</p>
+    </footer>
+</body>
+</html>
